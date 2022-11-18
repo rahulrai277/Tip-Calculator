@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Tip Calculator</title>
+
+    
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body>
+
+    <div id="container">
+        <h1>Tip Calculator</h1>
+
+        <div id="calculator">
+            <form>
+                <label>
+                    &nbsp; How much was your bill?<br>
+                    &#8377; <input type="Number" min="0"
+                        onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+                        id="billAmount"><br>
+                </label>
+                <label>
+                    How was your service?<br>
+                   &nbsp; <select id="servicetip">
+                        <option disabled selected value="0">-- Choose an option --</option>
+
+                        <option value="0.3">30% - Wonderful</option>
+                        <option value="0.25">25% - Very Good</option>
+                        <option value="0.2">20% - Good </option>
+                        <option value="0.15">15% - Average</option>
+                        <option value="0.1">10% - Poor</option>
+                        <option value="0.05">5% - Terrible</option>
+                        <option value="0.0000000001"> I Don't Want Give Any Tip </option>
+                    </select>
+                </label><br>
+                <label>
+                    How many people are sharing the bill?<br>
+                   &nbsp; <input type="number" min="0"
+                        onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+                        id="totalPeople"> people
+                </label><br>
+                <button type="button" id="calculate" onclick= calculatetip()> Total Bill with tip </button>
+
+            </form>
+
+        </div>
+       
+
+        <div id="totalTip">
+            <sup>&#8377;</sup><span id="tip">0.00</span>
+            <small id="each">each</small>
+
+        </div>
+        
+        <hr>
+        <div id="totalamount">
+            <sup>&#8377;</sup><span id="totalbillid">0.00</span>
+
+
+        </div>
+        
+
+    </div>
+    
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
