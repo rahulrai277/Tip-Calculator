@@ -27,7 +27,7 @@ var total = (billAmount*servicetip)/ numPeople;
 
 total= total.toFixed(2);
 console.log(billAmount)
-var amountbill= (Number(billAmount) + Number(total));
+var amountbill= (Number(billAmount) + Number(billAmount*servicetip));
 console.log(amountbill)
  //// data ko html page pe load karne ke liye 
 document.getElementById("totalTip").style.display = "block";
